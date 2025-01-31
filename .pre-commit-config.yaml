@@ -1,0 +1,20 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+    -   id: trailing-whitespace # Trims trailing whitespace
+    -   id: end-of-file-fixer # Makes sure files end in a newline
+    -   id: check-yaml # Check for syntax errors in yaml files
+    -   id: check-added-large-files # Check for large files added to git
+-   repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+    -   id: isort
+
+-   repo: https://github.com/kynan/nbstripout
+    rev: v0.3.9
+    hooks:
+    -   id: nbstripout
+        args: [--install, --attributes=.gitattributes]
+        name: nbstripout
+        language: python
